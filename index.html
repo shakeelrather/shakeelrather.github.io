@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shakeel Ahmad Rather</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Shakeel Ahmad Rather, PhD research scholar in Water Resources and Hydraulic Engineering at NIT Jalandhar, working on flood discharges, glacial lake outburst floods and AI-based forecasting for Himalayan mountain streams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single reading column; hero sits on contour lines of a Himalayan valley; CV as timelines; publications as a filterable ledger */
+:root{
+  --bg:#EDF1F0; --surface:#F7F9F8; --fg:#13232A; --muted:#566A71; --line:#C9D4D3;
+  --accent:#0E6A75; --accent-soft:#D5E7E8; --silt:#8C6A2C; --silt-soft:#EFE4CE;
+  --display:"Spectral",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C1619; --surface:#122025; --fg:#E2EBEB; --muted:#93A8AD; --line:#24373D;
+  --accent:#5BC2C8; --accent-soft:#163940; --silt:#D9B46A; --silt-soft:#3A2F1A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1619; --surface:#122025; --fg:#E2EBEB; --muted:#93A8AD; --line:#24373D;
+  --accent:#5BC2C8; --accent-soft:#163940; --silt:#D9B46A; --silt-soft:#3A2F1A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:920px;margin:0 auto}
+
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--line)}
+.mark{font-family:var(--display);font-style:italic;font-size:1.25rem;color:var(--fg);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.9rem}
+nav ul a:hover{color:var(--accent)}
+
+.hero{position:relative;padding-block:60px 52px;overflow:hidden}
+.contours{position:absolute;top:0;bottom:0;right:-6%;width:62%;height:100%;pointer-events:none;opacity:.5}
+.contours path{fill:none;stroke:var(--accent);stroke-width:1}
+.hero-inner{position:relative;display:grid;grid-template-columns:170px minmax(0,1fr);gap:40px;align-items:start}
+.portrait{width:170px;height:170px;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--surface);max-width:100%}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:4px 0 16px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.5rem,6.5vw,4.2rem);line-height:1.02;margin:0 0 20px;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:1.12rem;max-width:58ch;margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+.chips li{font-family:var(--mono);font-size:.78rem;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.chips li.key{border-color:var(--accent);color:var(--accent)}
+.profiles{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:6px;font-size:.92rem;font-weight:500;text-decoration:none;border:1px solid var(--line);color:var(--fg);background:var(--surface)}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.primary:hover{color:var(--bg);opacity:.9}
+.btn svg{width:16px;height:16px;fill:currentColor}
+.metrics{display:flex;flex-wrap:wrap;gap:8px 28px;margin:30px 0 0;padding:16px 0 0;border-top:1px dashed var(--line);font-size:.9rem;color:var(--muted)}
+.metrics b{font-family:var(--mono);font-weight:500;color:var(--fg);font-variant-numeric:tabular-nums;margin-right:4px}
+
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+h2{font-family:var(--display);font-weight:400;font-size:2rem;margin:0;text-wrap:balance}
+.sec-note{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+p{max-width:65ch}
+.cv-h{font-family:var(--mono);font-size:.74rem;font-weight:500;color:var(--accent);letter-spacing:.07em;text-transform:uppercase;margin:0 0 12px}
+
+.thesis{margin:28px 0 0;padding:22px 24px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.thesis q{display:block;font-family:var(--display);font-size:1.35rem;line-height:1.35;font-style:italic;quotes:none;text-wrap:balance;margin-bottom:10px}
+.thesis p{margin:0;font-size:.92rem;color:var(--muted)}
+
+.focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 36px;margin-top:32px}
+.focus div{min-width:0}
+.focus h3{font-family:var(--mono);font-size:.74rem;font-weight:500;color:var(--accent);letter-spacing:.07em;text-transform:uppercase;margin:0 0 6px}
+.focus p{margin:0;color:var(--muted);font-size:.95rem}
+
+.site{margin-top:32px;display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-size:.92rem}
+.site dt{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding-top:3px}
+.site dd{margin:0;min-width:0}
+
+.cv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 44px}
+.cv>div{min-width:0}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:1px solid var(--line);display:grid;gap:22px}
+.tl li{position:relative;display:grid;gap:2px}
+.tl li::before{content:"";position:absolute;left:-23px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl .when{font-family:var(--mono);font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tl b{font-weight:600}
+.tl .where{font-size:.92rem;color:var(--muted)}
+.tl .note{font-size:.88rem;margin-top:4px}
+.tl .note i{font-family:var(--display);font-size:.98rem}
+
+.skills{display:grid;grid-template-columns:1fr 1.5fr;gap:28px 44px;margin-top:44px;padding-top:30px;border-top:1px dashed var(--line)}
+.skills>div{min-width:0}
+.skills .chips{margin:0 0 22px}
+.plainlist{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.93rem}
+.plainlist span{font-size:.82rem;color:var(--muted)}
+.plainlist .yr{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-left:6px}
+
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:.85rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.pubs{list-style:none;margin:0;padding:0}
+.pub{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;padding-block:22px;border-bottom:1px solid var(--line)}
+.pub:first-child{border-top:1px solid var(--line)}
+.year{font-family:var(--mono);font-size:.9rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
+.pub h3{font-family:var(--display);font-weight:500;font-size:1.2rem;line-height:1.3;margin:0 0 6px;text-wrap:balance}
+.authors{margin:0 0 4px;font-size:.92rem;color:var(--muted)}
+.authors b{color:var(--fg);font-weight:600}
+.venue{margin:0;font-size:.9rem;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+.tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+.tag.patent{background:var(--silt-soft);color:var(--silt)}
+.tag.plain,.tag.cites{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.tag.cites{text-transform:none}
+.meta a{font-family:var(--mono);font-size:.78rem}
+
+.service{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 44px}
+.service>div{min-width:0}
+.svc{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.svc li{display:grid;gap:2px}
+.svc b{font-weight:600}
+.svc span{font-size:.92rem;color:var(--muted)}
+.svc .when{font-family:var(--mono);font-size:.78rem}
+
+.collab{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px;list-style:none;padding:0;margin:0}
+.collab li{font-size:.95rem;min-width:0}
+.collab span{display:block;font-size:.8rem;color:var(--muted)}
+
+.contact{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:start}
+.cdl{margin:18px 0 0}
+.crow{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;align-items:center;padding-block:10px;border-bottom:1px solid var(--line)}
+.crow dt{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.crow dd{margin:0;display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.val{font-family:var(--mono);font-size:.92rem;user-select:all;word-break:break-all}
+.copy{font:inherit;font-size:.8rem;padding:5px 10px;border-radius:6px;border:1px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;flex:none}
+.links-list{list-style:none;padding:0;margin:0;display:grid;gap:4px}
+.links-list a{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--fg)}
+.links-list a span:last-child{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.links-list a:hover span:first-child{color:var(--accent)}
+
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:720px){
+  .hero-inner{grid-template-columns:1fr;gap:22px}
+  .portrait{width:120px;height:120px}
+  .focus,.contact,.cv,.skills,.service{grid-template-columns:1fr}
+  .crow{grid-template-columns:1fr;gap:2px}
+  .collab{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pub{grid-template-columns:1fr;gap:4px}
+  .contours{width:100%;right:0;opacity:.25}
+  .hero{padding-block:40px}
+  nav ul{gap:14px}
+}
+@media (max-width:420px){.collab{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){
+  .contours path{stroke-dasharray:1400;animation:draw 2.6s ease-out both}
+  @keyframes draw{from{stroke-dashoffset:1400}to{stroke-dashoffset:0}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="#top">S. A. Rather</a>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <svg class="contours" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 C120,40 180,110 300,90 S480,30 600,70"/>
+      <path d="M0,100 C130,80 190,150 300,130 S470,70 600,110"/>
+      <path d="M0,140 C140,120 200,190 300,172 S460,110 600,150"/>
+      <path d="M0,182 C150,165 210,232 300,215 S450,152 600,192"/>
+      <path d="M0,226 C160,210 220,276 300,260 S440,196 600,236"/>
+      <path d="M0,272 C170,258 230,320 300,306 S430,242 600,282"/>
+      <path d="M0,320 C180,308 240,366 300,354 S420,290 600,330"/>
+    </svg>
+    <div class="hero-inner">
+      <img class="portrait" src="data:image/jpeg;base64,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" alt="Portrait of Shakeel Ahmad Rather" width="170" height="170">
+      <div>
+        <p class="eyebrow">PhD Research Scholar · Water Resources &amp; Hydraulic Engineering · NIT Jalandhar</p>
+        <h1>Shakeel Ahmad <em>Rather</em></h1>
+        <p class="lede">I study flood discharges in steep Himalayan mountain streams: how glacial lakes fail, how flow reshapes the stream bed, and how statistics, hydrological models and AI can together give communities earlier, more reliable flood warnings.</p>
+        <ul class="chips" aria-label="Research interests">
+          <li class="key">Glacial Lake Outburst Floods</li><li>Hydrology</li><li>Hydrological Modelling</li><li>Mountain Stream Hydraulics</li><li>Hydraulic Structures</li><li>ML &amp; AI</li>
+        </ul>
+        <div class="profiles">
+          <a class="btn primary" href="https://scholar.google.com/citations?user=ktDoFSkAAAAJ&hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6.8 9.2V16c0 1.9 3 3.5 6.8 3.5s6.8-1.6 6.8-3.5v-3.8L12 16l-6.8-3.8z"/></svg>Google Scholar</a>
+          <a class="btn" href="https://www.researchgate.net/profile/Shakeel-Rather-3" target="_blank" rel="noopener">ResearchGate</a>
+          <a class="btn" href="https://orcid.org/0009-0001-3069-001X" target="_blank" rel="noopener">ORCID</a>
+          <a class="btn" href="https://www.linkedin.com/in/ishakeelrather/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="metrics" aria-label="Research metrics">
+          <span><b>16</b>citations</span>
+          <span><b>3</b>h-index</span>
+          <span><b>2</b>granted patents</span>
+          <span><b>1</b>patent application</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="research">
+    <div class="sec-head"><h2>Research</h2><span class="sec-note">Western Himalaya · Kashmir</span></div>
+    <p>My work joins field investigations, laboratory hydraulics, HEC-HMS and HEC-RAS modelling, and AI-based forecasting. It is grounded in the rivers and glacial lakes of the Western Himalaya, where floods arrive quickly, gauges are sparse and many lakes cannot be reached on foot.</p>
+    <div class="thesis">
+      <h3 class="cv-h">Doctoral thesis</h3>
+      <q>Investigations of Flood Discharges in Mountainous Streams Using Statistical, Artificial Intelligence and Hydrological Techniques</q>
+      <p>Supervised by Dr Mahesh Patel, Department of Civil Engineering, NIT Jalandhar</p>
+    </div>
+    <div class="focus">
+      <div>
+        <h3>Glacial lake outburst floods</h3>
+        <p>A probabilistic framework for GLOF hazard at moraine-dammed lakes too remote to survey, and a closer look at what evidence early warning systems need to move from detection to action.</p>
+      </div>
+      <div>
+        <h3>Discharge forecasting</h3>
+        <p>Predicting monthly flow of the Sindh River with support vector regression, k-nearest neighbours and gradient boosting.</p>
+      </div>
+      <div>
+        <h3>Steep-stream flow &amp; bed morphology</h3>
+        <p>Laboratory and field study of how flow and bed form interact in steep mountain streams, under an ANRF-funded project completed in November 2025.</p>
+      </div>
+      <div>
+        <h3>Sediment transport</h3>
+        <p>Bringing physics-based and AI-driven approaches together for sediment transport modelling.</p>
+      </div>
+      <div>
+        <h3>Hydraulic instrumentation</h3>
+        <p>Designing laboratory hardware for open-channel experiments: a real-time water surface profiler, a hydraulic lab trolley and a 3D sonic bed mapper.</p>
+      </div>
+      <div>
+        <h3>Climate &amp; hydropower</h3>
+        <p>How a changing climate affects water availability and hydropower generation, the subject of my M.Tech thesis.</p>
+      </div>
+    </div>
+    <dl class="site">
+      <dt>Region</dt><dd>Western Himalaya; Sindh River, Kashmir</dd>
+      <dt>Hazard</dt><dd>Flash floods and moraine-dammed glacial lake outbursts</dd>
+      <dt>Models</dt><dd>HEC-HMS · HEC-RAS · WEAP</dd>
+      <dt>Methods</dt><dd>Probabilistic hazard analysis · SVR · KNN · Gradient Boosting</dd>
+    </dl>
+  </section>
+
+  <section id="cv">
+    <div class="sec-head"><h2>Experience &amp; education</h2></div>
+    <div class="cv">
+      <div>
+        <h3 class="cv-h">Research experience</h3>
+        <ol class="tl">
+          <li><span class="when">Nov 2025 – Mar 2026</span><b>Visiting Scholar</b><span class="where">University of Granada, Spain</span><span class="note">Collaborative research on flood modelling and hydrological analysis.</span></li>
+          <li><span class="when">Apr 2025 – Nov 2025</span><b>Senior Research Fellow</b><span class="where">NIT Jalandhar · Supervisor: Dr Mahesh Patel</span><span class="note">Project: <i>Investigations of Flow and Bed Morphology in Steep Mountain Streams</i> (ANRF, Govt. of India). Completed 30 November 2025.</span></li>
+          <li><span class="when">Apr 2023 – Apr 2025</span><b>Junior Research Fellow</b><span class="where">NIT Jalandhar · Supervisor: Dr Mahesh Patel</span><span class="note">Same project, funded by ANRF (formerly SERB-CRG).</span></li>
+          <li><span class="when">Nov 2018 – Mar 2019</span><b>Research Intern</b><span class="where">Design Innovation Centre, IUST, Jammu &amp; Kashmir</span><span class="note">Affordable Hammams: cost-effective traditional heating systems.</span></li>
+        </ol>
+      </div>
+      <div>
+        <h3 class="cv-h">Education</h3>
+        <ol class="tl">
+          <li><span class="when">Jul 2023 – present</span><b>PhD, Hydraulics &amp; Water Resources Engineering</b><span class="where">Dr B R Ambedkar National Institute of Technology Jalandhar</span></li>
+          <li><span class="when">Sep 2020 – May 2022</span><b>M.Tech, Hydropower Engineering</b><span class="where">Maulana Azad National Institute of Technology, Bhopal · CGPA 8.47/10 · AICTE funded</span><span class="note">Thesis: <i>Climate Change and Its Effect on Hydropower Generation</i></span></li>
+          <li><span class="when">Jul 2014 – Aug 2018</span><b>B.Tech, Civil Engineering</b><span class="where">Islamic University of Science and Technology, Awantipora · CGPA 8.19/10</span><span class="note">Thesis: <i>Fibre Reinforced High Alumina Cement Composites as a Replacement to Stone Tiles in Kashmiri Hammam</i></span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="skills">
+      <div>
+        <h3 class="cv-h">Software</h3>
+        <ul class="chips"><li>HEC-RAS</li><li>HEC-HMS</li><li>WEAP</li><li>QGIS</li><li>AutoCAD</li><li>Origin</li><li>Python</li></ul>
+        <h3 class="cv-h">Funding</h3>
+        <ul class="plainlist">
+          <li>JRF &amp; SRF, ANRF (formerly SERB-CRG), Govt. of India</li>
+          <li>Fully funded M.Tech, AICTE</li>
+        </ul>
+        <h3 class="cv-h" style="margin-top:22px">Languages</h3>
+        <ul class="plainlist"><li>Kashmiri <span>· native</span></li><li>English <span>· professional</span></li><li>Urdu</li></ul>
+      </div>
+      <div>
+        <h3 class="cv-h">Training &amp; certifications</h3>
+        <ul class="plainlist">
+          <li>Karyashala on Statistical Methods in Water Resources Engineering <span>· VNIT Nagpur</span><span class="yr">2024</span></li>
+          <li>Workshop on Hydraulics Measurement Techniques <span>· NIT Rourkela</span><span class="yr">2023</span></li>
+          <li>Training Program on Glacier Studies and Remote Sensing <span>· IISc Bangalore</span><span class="yr">2022</span></li>
+          <li>Recent Trends in Clean Energy <span>· MANIT Bhopal</span><span class="yr">2021</span></li>
+          <li>Developing Soft Skills and Personality <span>· IIT Kanpur</span><span class="yr">2021</span></li>
+          <li>Certificate Course in Total Station Survey <span>· IUST</span><span class="yr">2016</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="sec-head">
+      <h2>Publications &amp; patents</h2>
+      <div class="filters" role="group" aria-label="Filter publications">
+        <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+        <button type="button" id="f-journal" data-f="journal" aria-pressed="false">Journal</button>
+        <button type="button" id="f-conf" data-f="conference" aria-pressed="false">Conference &amp; chapters</button>
+        <button type="button" id="f-patent" data-f="patent" aria-pressed="false">Patents</button>
+      </div>
+    </div>
+    <ol class="pubs" id="pubs">
+      <li class="pub" data-type="journal">
+        <div class="year">2027</div>
+        <div>
+          <h3>A Probabilistic Framework for Characterizing Glacial Lake Outburst Flood Hazard from Inaccessible Moraine-Dammed Lakes in the Western Himalaya</h3>
+          <p class="authors"><b>S. A. Rather</b>, M. Patel, K. Kapoor</p>
+          <p class="venue">Physics and Chemistry of the Earth, Parts A/B/C 145, 104861</p>
+          <div class="meta"><span class="tag">Journal</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="patent">
+        <div class="year">2026</div>
+        <div>
+          <h3>Hydro-Sonic-3D-Mapper</h3>
+          <p class="authors">S. Singh, M. Patel, <b>S. A. Rather</b>, T. K. Singh</p>
+          <p class="venue">Utility patent application, The Patent Office, Government of India</p>
+          <div class="meta"><span class="tag patent">Patent</span><span class="tag plain">Under process</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="other">
+        <div class="year">2026</div>
+        <div>
+          <h3>From Detection to Action: Rethinking the Evidence Base for Glacial Lake Outburst Flood Early Warning</h3>
+          <p class="authors"><b>S. A. Rather</b>, M. Patel</p>
+          <div class="meta"><span class="tag plain">Article</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="other">
+        <div class="year">2026</div>
+        <div>
+          <h3>Python Workflow for Rainfall Data Processing and Precipitation Analysis</h3>
+          <p class="authors"><b>S. A. Rather</b>, A. Millares Valenzuela, M. Patel</p>
+          <div class="meta"><span class="tag plain">Workflow</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="journal">
+        <div class="year">2025</div>
+        <div>
+          <h3>AI-driven forecasting of river discharge: the case study of the Himalayan mountainous river</h3>
+          <p class="authors"><b>S. A. Rather</b>, M. Patel, K. Kapoor</p>
+          <p class="venue">Earth Science Informatics 18(2), 242</p>
+          <div class="meta"><span class="tag">Journal</span><span class="tag cites">9 citations</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="conference">
+        <div class="year">2025</div>
+        <div>
+          <h3>A Comprehensive Review of Glacial Lake Analysis and Flash Flood Risk Assessment in Mountain Regions: Methods, Challenges, and Future Directions</h3>
+          <p class="authors"><b>S. A. Rather</b>, K. Kapoor, M. Patel</p>
+          <p class="venue">1st International Conference on Advances in Water Resources (AWaRe 2025), MANIT Bhopal</p>
+          <div class="meta"><span class="tag">Conference</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="conference">
+        <div class="year">2025</div>
+        <div>
+          <h3>Towards Bridging Physics and Data: Emerging Paradigms in AI-driven Sediment Transport Modeling</h3>
+          <p class="authors">A. A. Mir, <b>S. A. Rather</b>, W. Zhang</p>
+          <p class="venue">6th IAHR Young Professionals Congress, 217–219</p>
+          <div class="meta"><span class="tag">Conference</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="patent">
+        <div class="year">2025</div>
+        <div>
+          <h3>Next-Gen Hydraulic Lab Trolley with Precision Control and Instrument Integration</h3>
+          <p class="authors"><b>S. A. Rather</b>, M. Patel, S. Singh, A. A. Mir, S. Sharma</p>
+          <p class="venue">Indian Design Patent No. 475322-001</p>
+          <div class="meta"><span class="tag patent">Patent</span><span class="tag plain">Granted</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="conference">
+        <div class="year">2024</div>
+        <div>
+          <h3>Assessment of Technological Developments in River Morphology Analysis: A Comprehensive Review</h3>
+          <p class="authors"><b>S. A. Rather</b>, A. A. Mir, K. Kapoor, M. Patel</p>
+          <p class="venue">Hydraulics and Fluid Mechanics, Vol. 2: Select Proceedings of HYDRO 2023, Springer Nature</p>
+          <div class="meta"><span class="tag">Book chapter</span><span class="tag cites">3 citations</span><a href="https://doi.org/10.1007/978-981-97-8895-8" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+      <li class="pub" data-type="patent">
+        <div class="year">2024</div>
+        <div>
+          <h3>Automated Device for Real-Time Water Surface Profiling and Method of Operating the Automated Device</h3>
+          <p class="authors">M. Patel, S. Singh, <b>S. A. Rather</b>, K. Saurabh</p>
+          <p class="venue">Indian Patent No. 554586 · Application 202411021642 · Filed 21 Mar 2024, granted 19 Nov 2024</p>
+          <div class="meta"><span class="tag patent">Patent</span><span class="tag plain">Granted</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="journal">
+        <div class="year">2023</div>
+        <div>
+          <h3>An Experimental Study on the Mechanical and Thermal Behaviour of Composite Concrete Based Hammam</h3>
+          <p class="authors">M. D. Bhat, Z. Paul, <b>S. A. Rather</b>, M. U. Rehman</p>
+          <p class="venue">Journal of The Institution of Engineers (India): Series A 104(4), 779–789</p>
+          <div class="meta"><span class="tag">Journal</span><a href="https://doi.org/10.1007/s40030-023-00755-4" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+      <li class="pub" data-type="conference">
+        <div class="year">2022</div>
+        <div>
+          <h3>Climate Change and Water Management of Sindh Catchment</h3>
+          <p class="authors"><b>S. A. Rather</b>, R. Khare, V. Prasad</p>
+          <p class="venue">International Conference on Hydropower and Dams Development for Water and Energy Security, Rishikesh, 7–9 April 2022</p>
+          <div class="meta"><span class="tag">Conference</span></div>
+        </div>
+      </li>
+      <li class="pub" data-type="journal">
+        <div class="year">2018</div>
+        <div>
+          <h3>Engineering Feasibility of Gabion Structures over Reinforced Concrete Structures</h3>
+          <p class="authors">S. Y. Shah, Z. U. Islam, <b>S. A. Rather</b></p>
+          <p class="venue">International Research Journal of Engineering and Technology 5(10)</p>
+          <div class="meta"><span class="tag">Journal</span><span class="tag cites">4 citations</span></div>
+        </div>
+      </li>
+    </ol>
+    <p class="sec-note" style="margin-top:18px">Citation counts from <a href="https://scholar.google.com/citations?user=ktDoFSkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, October 2026.</p>
+  </section>
+
+  <section id="service">
+    <div class="sec-head"><h2>Service &amp; outreach</h2></div>
+    <div class="service">
+      <div>
+        <h3 class="cv-h">Professional</h3>
+        <ul class="svc">
+          <li><span class="when">2025</span><b>Organising Committee Member</b><span>One-week workshop on Next-Gen AI Frameworks for Real-Time Flash Flood Risk Management in Mountainous Terrains</span></li>
+          <li><span class="when">2025</span><b>Session Chair</b><span>International Conference on Symbiotic Intelligence: AI and Connected Things for a Self-Adaptive World (ICSICTSAW-2025)</span></li>
+          <li><span class="when">Mar 2024</span><b>Committee Member</b><span>FDP and Workshop on Water Resources Management &amp; Fluvial Hydraulics, NIT Jalandhar</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="cv-h">Community</h3>
+        <ul class="svc">
+          <li><span class="when">2020</span><b>Educational support during COVID-19</b><span>Online tutoring and learning resources for local students during school closures</span></li>
+          <li><span class="when">2014</span><b>Kashmir flood relief</b><span>Coordinated transport of food supplies to communities hit by the 2014 Kashmir floods</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="collaborators">
+    <div class="sec-head"><h2>Collaborators</h2></div>
+    <ul class="collab">
+      <li>Dr Mahesh Patel<span>PhD supervisor, NIT Jalandhar</span></li>
+      <li>Kanish Kapoor<span>GLOF hazard, discharge forecasting</span></li>
+      <li>Ajaz Ahmad Mir<span>Sediment transport, morphology</span></li>
+      <li>A. Millares Valenzuela<span>Rainfall data workflows</span></li>
+      <li>Wenming Zhang<span>AI-driven sediment transport</span></li>
+      <li>S. Singh<span>Hydraulic instrumentation patents</span></li>
+      <li>Muhammad Dilawar Bhat<span>Hammam composite concrete</span></li>
+      <li>Ruchi Khare &amp; Vishnu Prasad<span>Sindh catchment, MANIT Bhopal</span></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <h2>Get in touch</h2>
+        <p>I welcome collaborations on glacial lake hazards, mountain stream hydraulics, flood early warning and hydraulic instrumentation.</p>
+        <dl class="cdl">
+          <div class="crow"><dt>Institute email</dt><dd><span class="val" id="c-inst">shakeelar.ce.23@nitj.ac.in</span><button class="copy" type="button" id="copy-inst" data-t="c-inst">Copy</button></dd></div>
+          <div class="crow"><dt>Personal email</dt><dd><span class="val" id="c-mail">contactshakeelrather@gmail.com</span><button class="copy" type="button" id="copy-mail" data-t="c-mail">Copy</button></dd></div>
+          <div class="crow"><dt>Phone</dt><dd><span class="val" id="c-tel">+91 78895 16822</span><button class="copy" type="button" id="copy-tel" data-t="c-tel">Copy</button></dd></div>
+          <div class="crow"><dt>ORCID iD</dt><dd><a class="val" href="https://orcid.org/0009-0001-3069-001X" target="_blank" rel="noopener">0009-0001-3069-001X</a></dd></div>
+        </dl>
+      </div>
+      <ul class="links-list">
+        <li><a href="https://scholar.google.com/citations?user=ktDoFSkAAAAJ&hl=en" target="_blank" rel="noopener"><span>Google Scholar</span><span>citations</span></a></li>
+        <li><a href="https://www.researchgate.net/profile/Shakeel-Rather-3" target="_blank" rel="noopener"><span>ResearchGate</span><span>full texts</span></a></li>
+        <li><a href="https://orcid.org/0009-0001-3069-001X" target="_blank" rel="noopener"><span>ORCID</span><span>researcher iD</span></a></li>
+        <li><a href="https://www.linkedin.com/in/ishakeelrather/" target="_blank" rel="noopener"><span>LinkedIn</span><span>network</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Shakeel Ahmad Rather</span>
+    <span>Dr B R Ambedkar National Institute of Technology Jalandhar</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const btns=[...document.querySelectorAll('.filters button')];
+  const pubs=[...document.querySelectorAll('#pubs .pub')];
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    btns.forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+    const f=b.dataset.f;
+    pubs.forEach(p=>{p.hidden=!(f==='all'||p.dataset.type===f)});
+  }));
+  document.querySelectorAll('.copy').forEach(btn=>{
+    const el=document.getElementById(btn.dataset.t);
+    const label=btn.textContent;
+    function sel(){const r=document.createRange();r.selectNodeContents(el);const g=getSelection();g.removeAllRanges();g.addRange(r);btn.textContent='Selected'}
+    btn.addEventListener('click',()=>{
+      const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent=label,1600)};
+      try{navigator.clipboard.writeText(el.textContent).then(done,sel)}catch(e){sel()}
+    });
+  });
+})();
+</script>
+</body>
+</html>
